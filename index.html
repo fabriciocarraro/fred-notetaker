@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fred — self-hosted AI meeting notes</title>
+<style>
+  :root { color-scheme: dark; }
+  body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+         background:#14110D; color:#F4EFE7; line-height:1.65; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 56px 24px 80px; }
+  .mark { width:56px; height:56px; border-radius:14px; }
+  h1 { font-size: 34px; letter-spacing:-.02em; margin: 18px 0 8px; }
+  .tag { color:#AEA492; font-size:18px; margin:0 0 36px; }
+  h2 { font-size: 20px; margin: 36px 0 10px; letter-spacing:-.01em; }
+  p, li { color:#D8D2C6; font-size:15.5px; }
+  .card { background:#1B1712; border:1px solid #2C261E; border-radius:14px; padding:20px 22px; margin:14px 0; }
+  .card h3 { margin:0 0 6px; font-size:16px; color:#F4EFE7; }
+  .card p { margin:0; font-size:14.5px; }
+  a { color:#E8A33D; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  footer { margin-top:56px; padding-top:20px; border-top:1px solid #2C261E; color:#7C7263; font-size:13.5px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <svg class="mark" viewBox="0 0 32 32" aria-hidden="true">
+    <rect x="1" y="1" width="30" height="30" rx="9" fill="#E8A33D"/>
+    <path d="M9 20.5c2-1 3-4.5 3.5-8M12.5 12.5c4.5-.5 7-.5 10.5 0M12 16.5c3.5-.4 5.5-.4 8.5 0"
+          stroke="#171310" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+  </svg>
+  <h1>Fred</h1>
+  <p class="tag">The self-hosted AI notetaker for your meetings — private by architecture.</p>
+
+  <p>Fred joins your Google Meet meetings automatically, records them, and turns each one into
+  structured notes: a summary, key points, decisions, and action items with owners — plus a full
+  speaker-labelled, multilingual transcript you can search and ask questions about.
+  All processing (speech recognition, speaker identification, summarization) runs on
+  <strong>your own server</strong>. No meeting audio or content is ever sent to a third-party AI service.</p>
+
+  <h2>How it works</h2>
+  <div class="card"><h3>1 · Connect your Google Calendar</h3>
+    <p>Sign in with Google and grant calendar access. Fred watches your upcoming events for Google Meet links.</p></div>
+  <div class="card"><h3>2 · Fred joins by itself</h3>
+    <p>Moments before each meeting starts, Fred adds its notetaker account as a guest and joins the call as a visible participant.</p></div>
+  <div class="card"><h3>3 · Notes appear minutes after the call</h3>
+    <p>Summary, action items, decisions, and a speaker-labelled transcript — in the languages actually spoken, side by side.</p></div>
+
+  <h2>Why Fred needs calendar access</h2>
+  <p>Fred requests the <code style="color:#E8A33D">calendar.events</code> permission for exactly two things:
+  <em>reading</em> your upcoming events to find Google Meet meetings to join, and <em>adding</em> its own
+  notetaker account as a guest on those events so it can enter the meeting as an invited participant.
+  Fred never creates, deletes, or otherwise modifies your events.</p>
+
+  <h2>Private by architecture</h2>
+  <ul>
+    <li>Speech-to-text, speaker ID, and summaries are computed with open-source models on self-hosted hardware.</li>
+    <li>Meeting audio is deleted automatically after 15 days; notes stay until you delete them.</li>
+    <li>Access is restricted to an administrator-managed allowlist; each user sees only their own meetings.</li>
+  </ul>
+
+  <footer>
+    <a href="privacy.html">Privacy Policy</a> · Contact: <a href="mailto:frednotetaker@gmail.com">frednotetaker@gmail.com</a>
+    <br>© 2026 Fred Notetaker
+  </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Fred</title>
+<style>
+  :root { color-scheme: dark; }
+  body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+         background:#14110D; color:#F4EFE7; line-height:1.7; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 56px 24px 80px; }
+  h1 { font-size: 30px; letter-spacing:-.02em; margin-bottom:4px; }
+  .date { color:#7C7263; font-size:13.5px; margin-bottom:32px; }
+  h2 { font-size: 19px; margin: 32px 0 8px; }
+  p, li { color:#D8D2C6; font-size:15px; }
+  a { color:#E8A33D; text-decoration:none; }
+  footer { margin-top:56px; padding-top:20px; border-top:1px solid #2C261E; color:#7C7263; font-size:13.5px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Privacy Policy</h1>
+  <p class="date">Fred Notetaker · Last updated: July 9, 2026</p>
+
+  <p>Fred ("the app") is a self-hosted meeting notetaker operated by its administrator on private
+  infrastructure. This policy describes what data Fred handles and how.</p>
+
+  <h2>Information Fred accesses</h2>
+  <ul>
+    <li><strong>Google account identity</strong> (name, email) — used to sign you in and to associate meetings with your account.</li>
+    <li><strong>Google Calendar events</strong> (via the <code>calendar.events</code> scope) — Fred reads upcoming events to detect Google Meet meetings, and adds its own notetaker account as a guest on those events. Fred never creates, deletes, or otherwise edits your events, and does not read calendars you have not connected.</li>
+    <li><strong>Meeting audio and metadata</strong> — when Fred joins a meeting as a visible participant, it records the meeting audio and captures participant names and speaking times in order to produce transcripts and notes.</li>
+  </ul>
+
+  <h2>How information is used</h2>
+  <p>Calendar data is used solely to schedule Fred's attendance. Meeting audio is used solely to produce
+  transcripts, speaker labels, summaries, and answers to your questions about the meeting. All processing
+  — speech recognition, speaker identification, language identification, and summarization — is performed
+  by open-source models running on the operator's own server. <strong>No meeting content, audio, calendar
+  data, or Google user data is sent to third-party services, sold, or used for advertising or to train
+  machine-learning models.</strong></p>
+
+  <h2>Google user data and Limited Use</h2>
+  <p>Fred's use and transfer of information received from Google APIs adheres to the
+  <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>,
+  including the Limited Use requirements.</p>
+
+  <h2>Storage and retention</h2>
+  <ul>
+    <li>All data is stored on the operator's self-hosted server.</li>
+    <li>Meeting <strong>audio recordings are deleted automatically after 15 days</strong>.</li>
+    <li>Transcripts, summaries, and notes are retained until deleted by you or the administrator.</li>
+    <li>Google OAuth tokens are stored encrypted at the operating-system level with restricted file permissions and are used only to poll your calendar.</li>
+  </ul>
+
+  <h2>Sharing</h2>
+  <p>Meeting notes are visible only to the account that owns the meeting and to instance administrators.
+  Access requires sign-in with Google and membership in an administrator-managed allowlist. Fred has no
+  third-party integrations that receive your data.</p>
+
+  <h2>Your controls</h2>
+  <ul>
+    <li>Disconnect your calendar at any time from the app's Settings page — this deletes the stored token immediately.</li>
+    <li>Revoke Fred's access entirely at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
+    <li>Request deletion of any meeting, transcript, or your account data by contacting the administrator.</li>
+  </ul>
+
+  <h2>Contact</h2>
+  <p>Questions or data requests: <a href="mailto:frednotetaker@gmail.com">frednotetaker@gmail.com</a></p>
+
+  <footer><a href="index.html">← fred.live</a></footer>
+</div>
+</body>
+</html>
